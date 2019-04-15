@@ -11773,7 +11773,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11821,23 +11821,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -11868,7 +11868,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -12413,7 +12413,7 @@ Standard deviation of prices: $165,340.28
 <li><p>What benefit does this technique provide for grid search when optimizing a model?</p>
 </li>
 </ul>
-<p><strong>Answer:</strong> Cross Validation allows us to train the model multiple times in order to get the most accurate score and by preventing Over-Fitting.. Cross validation will use 100% of the data versus splitting it into 80/20 by dividing it into <code>k</code> buckets. Let's say k=5. First, Bucket <code>1</code> turns into the <code>test set</code> and the rest (2,3,4,5) as the <code>training set</code>. Once training is complete and you get a score, you will make bucket 2 the <code>test set</code> and buckets 1,3,4,5 the training set. After you iterate through all the buckets you take the average score from all the iterations. K-fold Cross validation will benefit Grid Search by providing a robust model due to the multiple training iterations versus just one with the standard 80/20 split.</p>
+<p><strong>Answer:</strong> Cross Validation allows us to train the model multiple times in order to get the most accurate score and by preventing Over-Fitting. The first step of <em>Cross Validation</em> is to split the <code>Training Set</code> into <code>k</code> buckets. Let's say k=5. First, Bucket <code>1</code> turns into the <code>test set</code> and the rest (2,3,4,5) as the <code>training set</code>. Once training is complete and you get a score, you will make bucket 2 the <code>test set</code> and buckets 1,3,4,5 the training set. After you iterate through all the buckets you take the average score from all the iterations. K-fold Cross validation will benefit Grid Search by providing a robust model due to the multiple training iterations in order to tune hyperparams and pick the best model versus the standard 80/20 split.</p>
 
 </div>
 </div>
